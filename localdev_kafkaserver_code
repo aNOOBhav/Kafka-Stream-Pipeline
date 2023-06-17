@@ -1,0 +1,19 @@
+---- Code base to initiate Kafka messaging service on local machine -----
+
+# Starting Zookeeper 
+> %KAFKA_HOME%\bin\windows\zookeeper-server-start.bat %KAFKA_HOME%\etc\kafka\zookeeper.properties
+
+# Starting Kafka Server
+> %KAFKA_HOME%\bin\windows\kafka-server-start.bat %KAFKA_HOME%\etc\kafka\server-0.properties
+
+# Create Kafka Topic
+> %KAFKA_HOME%\bin\windows\kafka-topics.bat --create --zookeeper localhost:3181 --partitions 1 --replication-factor 1  --topic stockmarket-project-1
+
+# Initiate Producer
+> %KAFKA_HOME%\bin\windows\kafka-console-producer --broker-list localhost:9092 --topic stockmarket-project-1
+
+# Initiate Consumer
+> %KAFKA_HOME%\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stockmarket-project-1
+
+
+
