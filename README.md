@@ -13,4 +13,8 @@ ii. Access these services using a Python IDE or notebook for easier interaction
 iii. Create an S3 bucket and write files from consumer onto the bucket
 iv. Set up a GLUE crawler to crawl all the streaming files in json from S3 to create a structured table, you can also create Lakeformation resources to store the dump
 v. Once done, consume the table in Athena, build queries and if required, create visualisations in AWS Quicksight on top of this
-v. 
+
+Pre-requisites -
+Need all property files for Kafka on local dev. Use the frameworks directory objects mentioned here in root 
+AWS Account
+
